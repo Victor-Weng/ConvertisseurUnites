@@ -1,7 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConvertisseurController">
-	<!-- TODO Add Nodes -->
+
+<AnchorPane prefHeight="426.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConvertisseurController">
+   <children>
+      <TabPane prefHeight="426.0" prefWidth="544.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Accueil">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="721.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="50.0" layoutY="99.0" lineSpacing="3.0" opacity="0.73" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="CONVERTISSEUR D'UNITÉS" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="44.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="21.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue dans le convertisseur d'unité, il est capable de convertir des mesures telles que la longueur, la surface, le volume, la masse et la vitesse dans leurs onglets séparés. Ainsi de presenter le taux de conversion utiliséé" textAlignment="CENTER" wrappingWidth="508.244140625">
+                           <font>
+                              <Font name="Corbel Light" size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="408.0" layoutY="321.0" mnemonicParsing="false" onAction="#fermer" prefHeight="37.0" prefWidth="83.0" text="Quitter">
+                           <font>
+                              <Font name="Impact" size="13.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#bcb8b8" layoutX="21.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date de Creation : 3/4/21 Par : Victor Weng">
+                           <font>
+                              <Font name="Impact" size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Longeur">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="195.0" layoutY="103.0" lineSpacing="3.0" opacity="0.73" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="LONGEUR" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="44.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cboL1" layoutX="88.0" layoutY="143.0" onAction="#calculerL1" prefWidth="150.0" />
+                        <TextField fx:id="txtL1" layoutX="88.0" layoutY="199.0" onKeyReleased="#calculerL1" text="1" />
+                        <TextField fx:id="txtL2" layoutX="310.0" layoutY="199.0" onKeyReleased="#calculerL2" text="1" />
+                        <ComboBox fx:id="cboL2" layoutX="310.0" layoutY="143.0" onAction="#calculerL2" prefWidth="150.0" />
+                        <Text fill="#949494" layoutX="70.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le Taux de conversion est de :" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtTL" editable="false" layoutX="319.0" layoutY="239.0" promptText="1.0">
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Surface">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="195.0" layoutY="103.0" lineSpacing="3.0" opacity="0.73" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="SURFACE" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="44.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cboS1" layoutX="88.0" layoutY="143.0" onAction="#calculerS1" prefWidth="150.0" />
+                        <TextField fx:id="txtS1" layoutX="88.0" layoutY="199.0" onKeyReleased="#calculerS1" text="1" />
+                        <TextField fx:id="txtS2" layoutX="310.0" layoutY="199.0" onKeyReleased="#calculerS2" text="1" />
+                        <ComboBox fx:id="cboS2" layoutX="310.0" layoutY="143.0" onAction="#calculerS2" prefWidth="150.0" />
+                        <Text fill="#949494" layoutX="71.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le Taux de conversion est de :" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtTS" editable="false" layoutX="318.0" layoutY="249.0" promptText="1.0">
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Volume">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="203.0" layoutY="103.0" lineSpacing="3.0" opacity="0.73" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="VOLUME" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="44.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cboV1" layoutX="88.0" layoutY="143.0" onAction="#calculerV1" prefWidth="150.0" />
+                        <TextField fx:id="txtV1" layoutX="88.0" layoutY="199.0" onKeyReleased="#calculerV1" text="1" />
+                        <TextField fx:id="txtV2" layoutX="310.0" layoutY="199.0" onKeyReleased="#calculerV2" text="1" />
+                        <ComboBox fx:id="cboV2" layoutX="310.0" layoutY="143.0" onAction="#calculerV2" prefWidth="150.0" />
+                        <Text fill="#949494" layoutX="69.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le Taux de conversion est de :" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtTV" editable="false" layoutX="319.0" layoutY="248.0" promptText="1.0">
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Mass">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="213.0" layoutY="102.0" lineSpacing="3.0" opacity="0.73" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="MASSE" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="44.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cboM1" layoutX="88.0" layoutY="143.0" onAction="#calculerM1" prefWidth="150.0" />
+                        <TextField fx:id="txtM1" layoutX="88.0" layoutY="199.0" onKeyReleased="#calculerM1" text="1" />
+                        <TextField fx:id="txtM2" layoutX="310.0" layoutY="199.0" onKeyReleased="#calculerM2" text="1" />
+                        <ComboBox fx:id="cboM2" layoutX="310.0" layoutY="143.0" onAction="#calculerM2" prefWidth="150.0" />
+                        <Text fill="#949494" layoutX="70.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le Taux de conversion est de :" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtTM" editable="false" layoutX="319.0" layoutY="249.0" promptText="1.0">
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Vitesse">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="203.0" layoutY="102.0" lineSpacing="3.0" opacity="0.73" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="VITESSE" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="44.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cboVi1" layoutX="88.0" layoutY="143.0" onAction="#calculerVi1" prefWidth="150.0" />
+                        <TextField fx:id="txtVi1" layoutX="88.0" layoutY="199.0" onKeyReleased="#calculerVi1" text="1" />
+                        <TextField fx:id="txtVi2" layoutX="310.0" layoutY="199.0" onKeyReleased="#calculerVi2" text="1" />
+                        <ComboBox fx:id="cboVi2" layoutX="310.0" layoutY="143.0" onAction="#calculerVi2" prefWidth="150.0" />
+                        <Text fill="#949494" layoutX="70.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le Taux de conversion est de :" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtTVi" editable="false" layoutX="319.0" layoutY="249.0" promptText="1.0">
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
 </AnchorPane>
