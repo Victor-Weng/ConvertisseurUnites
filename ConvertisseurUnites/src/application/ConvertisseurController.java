@@ -3,8 +3,8 @@ package application;
 * Author : victor
 * Date : March. 3, 2021
 * Titre : ConvertisseurUnites
-* Description : Ceci est une application java qui permet d’effectuer la conversion des unités impériales en 
-* unités du système métrique et vice  versa. Il peut convertir les mesures tels que : 
+* Description : Ceci est une application java qui permet dâ€™effectuer la conversion des unitÃ©s impÃ©riales en 
+* unitÃ©s du systÃ¨me mÃ©trique et vice  versa. Il peut convertir les mesures tels que : 
 * la longueur, le surface, la volume, la masse, et la vitesse.
 */
 
@@ -99,7 +99,7 @@ public class ConvertisseurController implements Initializable{
     private TextField txtTVi;
     
     
-    // Action pour le boutton "quitter" qui serve a fermer le program
+    // Action pour le bouton "quitter" qui serve a fermer le program
     @FXML
     private void fermer()
     {
@@ -109,17 +109,17 @@ public class ConvertisseurController implements Initializable{
     // Les valeurs de conversion et les elements du comboBox
     
     // Longeur 1 = Metre
-    private ObservableList<String> listeL=(ObservableList<String>)FXCollections.observableArrayList("Kilomètre", "Mètre", "Centimètre", "Millimètre", "Mile", "Yard", "Pouce","Pied");
+    private ObservableList<String> listeL=(ObservableList<String>)FXCollections.observableArrayList("KilomÃ¨tre", "MÃ¨tre", "CentimÃ¨tre", "MillimÃ¨tre", "Mile", "Yard", "Pouce","Pied");
     
     double [] tabLong= {0.001,1,100,1000,0.0006214,1.0936,39.37,3.281};
 
     // Surface 1 = Metre Carre
-    private ObservableList<String> listeS=(ObservableList<String>)FXCollections.observableArrayList("km carré", "hectare", "mètre carré", "mile carré", "acres","pouce carré","pied carré");
+    private ObservableList<String> listeS=(ObservableList<String>)FXCollections.observableArrayList("km carrÃ©", "hectare", "mÃ¨tre carrÃ©", "mile carrÃ©", "acres","pouce carrÃ©","pied carrÃ©");
     
     double [] tabSurf= {0.00000001,10000,1,0.00000259,4047,1550,10.764};
 
     // Volume 1 = Litre
-    private ObservableList<String> listeV=(ObservableList<String>)FXCollections.observableArrayList("Gallon US", "Gallon UK", "Pint US", "Pint UK", "Oz fl US", "cu Pied", "cu Pouce", "Liter", "Milliliter", "cu Mètre ");
+    private ObservableList<String> listeV=(ObservableList<String>)FXCollections.observableArrayList("Gallon US", "Gallon UK", "Pint US", "Pint UK", "Oz fl US", "cu Pied", "cu Pouce", "Liter", "Milliliter", "cu MÃ¨tre ");
     double [] tabVolu= {0.265172,0.219969,2.11338,1.76,33.814,0.0353147,61.024,1,1000,0.001};
     
     // Masse 1 = Kg
@@ -174,7 +174,7 @@ public class ConvertisseurController implements Initializable{
 
     }
    
-    // Vérifiez quel bouton est cliqué et envoyez le numéro associé à la méthode 'calculer'
+    // VÃ©rifiez quel bouton est cliquÃ© et envoyez le numÃ©ro associÃ© Ã  la mÃ©thode 'calculer'
     
     // Longeur
     @FXML
